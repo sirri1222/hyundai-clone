@@ -1,0 +1,195 @@
+@charset "utf-8";
+/* ==========================================================================
+   CSS RESET
+   ========================================================================== */
+@font-face {
+	font-family: 'Pretendard';
+	src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+}
+@import url(//fonts.googleapis.com/earlyaccess/nanummyeongjo.css);
+
+
+
+
+* {
+	font-family:Pretendard, 'Nanum Myeongjo', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+}
+
+html {
+
+}
+/* Correct `block` display not defined in IE 8/9. */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+/* elements */
+body {
+	margin: 0;
+	padding: 0;
+	min-width: 1300px;
+	font-size: 13px;
+	color: #282828;
+	line-height: 1.42857;
+	-webkit-text-size-adjust: none;
+	-ms-interpolation-mode: bicubic;
+	font-family:Pretendard, 'Nanum Myeongjo', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+	width: 100%;
+	font-weight: 400;
+	letter-spacing:-0.4px;
+	top: 0;
+	left: 0;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+div,
+li,
+dt,
+dd,
+input,
+textarea,
+button {
+	font-family:Pretendard, 'Nanum Myeongjo', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+	margin: 0;
+	padding: 0;
+	color:#191919;
+}
+img,
+video,
+audio,
+object,
+embed,
+iframe {
+	max-width: 100%;
+}
+img {
+	border: 0 none;
+	line-height: 0;
+	-ms-interpolation-mode: bicubic;
+	-webkit-image-rendering: optimizeQuality;
+}
+ul,
+ol,
+dl {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+form {
+	margin: 0;
+}
+table {
+	width:100%;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+th,
+td {
+	padding: 0;
+}
+a {
+	color:#333;
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+	text-decoration: none;
+	line-height: inherit;
+}
+input[type="text"],
+input[type="password"],
+input[type="reset"],
+input[type="submit"],
+input[type="tel"],
+input[type="number"],
+input[type="email"]{
+	font-size: 13px;
+	background: none;
+	border-radius: 0px;
+	border: none;
+	-webkit-appearance: none;
+	-webkit-border-radius: 0;
+}
+input[type="text"]:disabled,
+input[type="password"]:disabled,
+input[type="reset"]:disabled,
+input[type="submit"]:disabled,
+input[type="tel"]:disabled,
+input[type="number"]:disabled,
+input[type="email"]:disabled{
+	background:#f0f0f0;
+}
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus,
+textarea:focus,
+select:focus{
+	outline:0;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+input[type="number"] {
+	-moz-appearance: textfield !important;
+}
+i {
+	font-style: normal;
+	display: inline-block;
+}
+textarea {
+	overflow-y: auto;
+}
+fieldset {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+select{
+	border:none;
+	border-radius:0;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	background: url(../images/icon/select_icon.png) no-repeat;
+	background-position:95% 50%;
+}
+select::-ms-expand {
+	display: none;
+}
+select option:checked {
+	color:#191919;
+}
+em{font-style: normal;}
+button{border:none;padding:0;margin:0;cursor:pointer;background:transparent;}
+button:focus{outline: 0;}
+br{font-family:dotum;}
+address{font-style: normal;}
+s{text-decoration: line-through;}
+::-webkit-scrollbar {width:8px;height:12px;background-color:rgba(137, 115, 88, 0.1);border-radius: 10px;}
+::-webkit-scrollbar-thumb {background-color:rgba(0, 0, 0, 0.1);}
