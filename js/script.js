@@ -1,4 +1,24 @@
 window.onload = function () {
+  // 메뉴기능
+  const nav = document.querySelector(".nav");
+  const btMenu = document.querySelector(".bt-menu");
+  const navClose = document.querySelector(".nav-close");
+
+  btMenu.addEventListener("click", function () {
+    // 클래스를 nav에 추가하고 싶다.
+    nav.classList.add("nav-active");
+  });
+
+  navClose.addEventListener("click", function () {
+    // 클래스를 nav에 삭제하고 싶다.
+    nav.classList.remove("nav-active");
+  });
+
+  // nav 영역을 벗어나는 이벤트 발생처리
+  nav.addEventListener("mouseleave", function () {
+    nav.classList.remove("nav-active");
+  });
+
   //  비디오 항목 체크 (video 태그로 파악)
   let videos = document.querySelectorAll(".swVisual video");
   // console.log(videos);
@@ -81,4 +101,22 @@ window.onload = function () {
     }, videoTime * 10);
   }
   videoReset();
+
+  // .visual-control > li 선택한다.
+  const visualControlLi = document.querySelectorAll(".visual-control > li");
+  // 클릭 이벤트를 처리하는 이벤트핸들러(약속된 함수)를 작성한다.
+  // : 이벤트(click)
+  // : 이벤트핸들러(addEventLisenter)
+  // visualControlLi[0].addEventListener("click", function(){})
+  visualControlLi.forEach((item, index) => {
+    item.addEventListener("click", function () {
+      // 클릭을 했을 때 슬라이드 번호로 점프한다.
+      console.log(index);
+      videoIndex = index;
+      // Swiper 슬라이드를 직접 점프시킨다.
+      // Swiper 에 내장된 함수를 작성
+      // 슬라이드명.slidTo(번호)
+      swVisual.slideTo(videoIndex);
+    });
+  });
 };

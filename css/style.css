@@ -21,6 +21,7 @@ img {
 html {
   font-size: 16px;
 }
+
 body {
   font-family: Pretendard, "Nanum Myeongjo", -apple-system, BlinkMacSystemFont,
     system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo",
@@ -41,6 +42,72 @@ body {
   width: 100%;
   padding: 0 90px;
   margin: 0 auto;
+}
+/* 주메뉴 */
+.nav {
+  position: fixed;
+  left: 100%;
+  top: 0;
+  width: 450px;
+  height: 100vh;
+  background-color: honeydew;
+  z-index: 999999;
+  padding: 50px;
+  background: rgba(0, 0, 0, 0.84);
+  overflow-y: auto;
+
+  transition: left 0.3s ease-in-out;
+}
+.nav-active {
+  left: calc(100% - 450px) !important;
+}
+.nav-close {
+  position: absolute;
+  right: 30px;
+  top: 20px;
+  display: block;
+  width: 23px;
+  height: 23px;
+  background: url("../images/close2.png") no-repeat center;
+  cursor: pointer;
+  border: none;
+  font-size: 0;
+}
+.gnb {
+  position: relative;
+  display: block;
+}
+.gnb > li {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 20px;
+}
+.gnb > li > a {
+  display: block;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: -0.9px;
+  color: #fff;
+}
+.depth2 {
+  position: relative;
+  display: block;
+  width: 180px;
+}
+.depth2 > li {
+  position: relative;
+  display: block;
+  padding-bottom: 20px;
+}
+.depth2 > li > a {
+  position: relative;
+  display: block;
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: -0.75px;
+  color: #fff;
 }
 /* 상단 */
 .header {
@@ -90,8 +157,20 @@ body {
   width: 100%;
   height: 100%;
 }
+.swVisual .swiper-slide {
+  overflow: hidden;
+}
+/* 비디오를 영역에 가득채우기 */
 .swVisual video {
-  width: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;
+  height: auto;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
 }
 .visual .inner {
   position: absolute;
@@ -111,6 +190,7 @@ body {
   width: calc(100% / 8);
   text-align: center;
   padding: 20px 0;
+  cursor: pointer;
 }
 .visual-control li::before {
   content: "";
@@ -121,8 +201,7 @@ body {
   height: 3px;
   background: rgba(255, 255, 255, 0.4);
 }
-.visual-control li::after {
-  content: "";
+.visual-control li > .bar {
   position: absolute;
   left: 0;
   top: 0;
@@ -130,10 +209,7 @@ body {
   height: 3px;
   background: rgba(255, 255, 255, 1);
   /* 비디오 시간을 100 등분으로 처리 */
-  transition: width 0.5s;
-}
-.visual-control li:hover::after {
-  width: 100%;
+  transition: width;
 }
 
 .visual-control li span {
