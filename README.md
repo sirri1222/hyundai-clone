@@ -1,9 +1,9 @@
 
-# (주)hyundai-clone 클론코딩
+# (주)현대그룹 클론코딩
 
 ## 정보
 
-- 원사이트 : https://www.hyundai.com
+- 원사이트 :https://www.hyundaigroup.com/
 - 작업기간 : 2023.03.20 ~ 2023.04.05
 
 ## 개선사항
