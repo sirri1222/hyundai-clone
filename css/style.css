@@ -66,8 +66,25 @@ body.active {
 .modal-box {
   width: 600px;
   height: 450px;
-  background-color: #fff;
+  background-color: #fbfde0;
   border-radius: 20px;
+  position: relative;
+}
+.modal-txt{
+  padding: 30px;
+  margin-top: 25%;
+  text-align: center;
+  font-size: 15px;
+  line-height: 2;
+}
+.modal-close{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  right: 180px;
+  top: 200px;
+  cursor: pointer;
+
 }
 /* 공통요소 */
 .wrap {
